@@ -44,7 +44,7 @@ export const ProjectsWidget: React.FC = () => {
         { label: 'Industry', value: 'Digital Music' },
         { label: 'Role', value: 'Web Developer' }
       ],
-      tools: ['HTML/CSS', 'JavaScript', 'Spotify API', 'Web Hosting'], // Silakan sesuaikan jika Anda menggunakan React/framework lain
+      tools: ['Laravel', 'JavaScript', 'Spotify API', 'Vite', 'PHP', 'Tailwind CSS'], // Silakan sesuaikan jika Anda menggunakan React/framework lain
       demoUrl: 'https://synxplay.web.id',
     },
     {
@@ -68,7 +68,7 @@ export const ProjectsWidget: React.FC = () => {
         { label: 'Hosting', value: 'GitHub Pages' },
         { label: 'Platform', value: 'Web Browser' }
       ],
-      tools: ['HTML5', 'CSS3', 'JavaScript', 'GitHub Pages'],
+      tools: ['React.js', 'Vite', 'Tailwind CSS', 'JavaScript', 'HTML5 Audio API', 'GitHub Pages'],
       demoUrl: 'https://flymuel.github.io/surat-untukmu/',
       githubUrl: 'https://github.com/flymuel/surat-untukmu'
     }

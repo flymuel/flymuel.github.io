@@ -47,7 +47,7 @@ export const TopNav: React.FC<TopNavProps> = ({ onNavClick, activeSection, onCon
         {/* Zone 1: Wordmark */}
         <div className="flex items-center gap-3 relative z-10 shrink-0">
           <div className="w-8 h-8 rounded-full bg-linear-to-tr from-cyan-400 via-sky-300 to-white flex items-center justify-center shadow-md border border-white/90">
-           <img src="/favicon.png" alt="Logo" className="w-full h-full object-cover" />
+           <img src="/logo.png" alt="Logo" className="w-full h-full object-cover" />
           </div>
           <div className="flex flex-col">
             <span className="font-bold text-sky-950 text-base sm:text-lg tracking-tight flex items-center gap-1.5 leading-none">
