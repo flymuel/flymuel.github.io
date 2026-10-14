@@ -35,12 +35,12 @@ A modern, nostalgic, and interactive personal portfolio website built with a **F
 
 ## 📬 Connect with Me
 
-- **Portfolio / Live Site:** [flymuel.github.io](https://flymuel.github.io)
+- **Portfolio / Live Site:** [flymuel.my.id](https://flymuel.my.id)
 - **Instagram:** [@flymuel](https://instagram.com/flymuel)
 - **GitHub:** [flymuel](https://github.com/flymuel)
 - **LinkedIn:** [Christopher Samuel](https://www.linkedin.com/in/christopher-samuel-1a0160253)
 - **Spotify:** [flymuel Artist Profile](https://open.spotify.com/artist/7omIedo8YBtFKe8TYzkG2b)
-- **Email:** christophersamuel887@gmail.com
+- **Email:** <christophersamuel887@gmail.com>
 
 ---
 *© 2026 Christopher Samuel. All rights reserved.*
