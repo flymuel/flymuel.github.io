@@ -48,7 +48,15 @@ export default function App() {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Mengukur tinggi TopNav (sekitar 80px) untuk dijadikan jarak offset agar tidak tertutup
+      const headerOffset = 80; 
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 

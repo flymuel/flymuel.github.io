@@ -30,18 +30,18 @@ export const BottomDock: React.FC<BottomDockProps> = ({
       badge: 'Badges'
     },
     {
-      id: 'projects',
-      label: 'Projects',
-      icon: <FaFolderOpen className="w-5 h-5 text-blue-900" />,
-      color: 'from-blue-300 via-sky-200 to-white',
-      badge: 'Works'
-    },
-    {
       id: 'media',
       label: 'Player',
       icon: <MdOutlineAlbum className="w-5 h-5 text-indigo-900" />,
       color: 'from-indigo-300 via-sky-200 to-white',
       badge: 'Spotify'
+    },
+    {
+      id: 'projects',
+      label: 'Projects',
+      icon: <FaFolderOpen className="w-5 h-5 text-blue-900" />,
+      color: 'from-blue-300 via-sky-200 to-white',
+      badge: 'Works'
     },
     {
       id: 'contact',
