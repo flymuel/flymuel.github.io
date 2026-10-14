@@ -1,5 +1,3 @@
-## Hi there 👋
-
 # 🌐 Christopher Samuel (flymuel) - Personal Portfolio
 
 A modern, nostalgic, and interactive personal portfolio website built with a **Frutiger Aero** aesthetic, featuring glassmorphism, skeuomorphic 3D gel elements, and a smooth user experience.
