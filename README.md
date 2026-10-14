@@ -1,27 +1,48 @@
 ## Hi there 👋
 
-I'm Samuel, and i'm an newbie programmer.
-I also making some various genre of music.
+# 🌐 Christopher Samuel (flymuel) - Personal Portfolio
 
-## You can listen to my music in here
-[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=T89wPSnaI4I&list=PLlQ3KfcD24ap3Ph1CeeslbNSV8JfNVYVd)
-[![Spotify](https://img.shields.io/badge/Spotify-%231DB954.svg?style=for-the-badge&logo=Spotify&logoColor=white)](https://open.spotify.com/artist/7omIedo8YBtFKe8TYzkG2b?si=pW5C-4DARFS6AaAFHaWRPg)
+A modern, nostalgic, and interactive personal portfolio website built with a **Frutiger Aero** aesthetic, featuring glassmorphism, skeuomorphic 3D gel elements, and a smooth user experience.
 
-## I'm currently learning
-[![JavaScript](https://img.shields.io/badge/javascript-%23323300.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://www.javascript.com/)
-[![React](https://img.shields.io/badge/react-%2361DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
-[![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/)
-[![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+![Frutiger Aero Theme](https://img.shields.io/badge/Theme-Frutiger%20Aero-38bdf8?style=flat-square)
+![React](https://img.shields.io/badge/React-Vite-61dafb?style=flat-square&logo=react)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-38bdf8?style=flat-square&logo=tailwind-css)
 
-List of my project
-- [Romantic Webapps](https://flymuel.my.id/surat-untukmu)
-- [Music Company Website](https://synxplay.web.id)
-- Portofolio Website => WIP
+---
 
-## You can contact me in here
+## ✨ Features & Highlights
 
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://id.linkedin.com/in/christopher-samuel-1a0160253)
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/flymuel/)
-[![X/Twitter](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https://x.com/flymuel1)
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/muelterbang)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:christophersamuel887@gmail.com)
+- **Aero Glassmorphism UI:** Clean, translucent glass panels, specular reflections, and 3D gel buttons inspired by mid-2000s software design.
+- **Interactive Web Media Player:** Custom audio player widget with playlist support, visualizer effects, and modern browser autoplay compliance.
+- **Featured Projects Showcase:** Interactive modals detailing projects like *Synxplay* and *Surat Untukmu* with full architectural breakdowns.
+- **Fully Responsive:** Optimized layout seamlessly scaling across desktop monitors, tablets, and mobile devices.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** React (Vite)
+- **Styling:** Tailwind CSS
+- **Icons:** React Icons (`react-icons`)
+- **Deployment:** GitHub Pages
+
+---
+
+## 🚀 Featured Projects
+
+1. **Synxplay** (`synxplay.web.id`) - Official digital web presence and platform for Synxplay music company.
+2. **Surat Untukmu** - An interactive web-based digital romantic surprise application hosted on GitHub Pages.
+
+---
+
+## 📬 Connect with Me
+
+- **Portfolio / Live Site:** [flymuel.github.io](https://flymuel.github.io)
+- **Instagram:** [@flymuel](https://instagram.com/flymuel)
+- **GitHub:** [flymuel](https://github.com/flymuel)
+- **LinkedIn:** [Christopher Samuel](https://www.linkedin.com/in/christopher-samuel-1a0160253)
+- **Spotify:** [flymuel Artist Profile](https://open.spotify.com/artist/7omIedo8YBtFKe8TYzkG2b)
+- **Email:** christophersamuel887@gmail.com
+
+---
+*© 2026 Christopher Samuel. All rights reserved.*
