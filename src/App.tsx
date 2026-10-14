@@ -112,6 +112,7 @@ export default function App() {
         activeSection={activeSection}
         onNavigate={scrollToSection}
         onOpenContact={() => setIsContactOpen(true)}
+        isModalOpen={isContactOpen}
       />
 
       {/* Floating Scroll To Top Pill (Desktop & Mobile) */}

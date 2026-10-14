@@ -22,34 +22,33 @@ export const MediaPlayerWidget: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const currentTrack = playlist[currentTrackIndex];
 
-// 1. EFEK UNTUK AUTOPLAY (HACK INTERAKSI AKTIF)
   useEffect(() => {
     const unlockAudio = () => {
-      // Jika audio ada dan sedang berhenti (paused), paksa putar
       if (audioRef.current && audioRef.current.paused) {
         audioRef.current.play()
           .then(() => {
             setIsPlaying(true);
-            // Hapus sensor setelah lagu berhasil terputar agar tidak memberatkan web
             window.removeEventListener('mousedown', unlockAudio);
             window.removeEventListener('touchstart', unlockAudio);
             window.removeEventListener('keydown', unlockAudio);
+            window.removeEventListener('scroll', unlockAudio);
           })
           .catch((err) => {
             console.log("Menunggu klik pengguna yang valid...", err);
           });
       }
     };
-
-    // Gunakan sensor aktif yang diizinkan browser (Klik mouse, sentuh layar HP, tekan keyboard)
+    
     window.addEventListener('mousedown', unlockAudio);
     window.addEventListener('touchstart', unlockAudio);
     window.addEventListener('keydown', unlockAudio);
+    window.addEventListener('scroll', unlockAudio, { passive: true });
 
     return () => {
       window.removeEventListener('mousedown', unlockAudio);
       window.removeEventListener('touchstart', unlockAudio);
       window.removeEventListener('keydown', unlockAudio);
+      window.removeEventListener('scroll', unlockAudio);
     };
   }, []);
 

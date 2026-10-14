@@ -7,13 +7,21 @@ interface BottomDockProps {
   activeSection: string;
   onNavigate: (sectionId: string) => void;
   onOpenContact: () => void;
+  isModalOpen?: boolean;
 }
 
 export const BottomDock: React.FC<BottomDockProps> = ({
   activeSection,
   onNavigate,
-  onOpenContact
+  onOpenContact,
+  isModalOpen = false
 }) => {
+  const hasActiveModal = isModalOpen || document.querySelector('.fixed.inset-0.z-50') !== null;
+  
+  if (hasActiveModal) {
+    return null;
+  }
+
   const navItems = [
     {
       id: 'profile',
@@ -67,7 +75,6 @@ export const BottomDock: React.FC<BottomDockProps> = ({
       <div className="aero-dock px-3 sm:px-4 py-2 flex items-end gap-2 sm:gap-3.5 relative shadow-2xl">
         {/* Dock Base Shelf Reflection Plate */}
         <div className="dock-shelf-plate" />
-
         {navItems.map((item) => {
           const isActive = activeSection === item.id;
           return (
@@ -76,7 +83,6 @@ export const BottomDock: React.FC<BottomDockProps> = ({
               <div className="absolute -top-10 scale-0 group-hover:scale-100 transition-all duration-200 pointer-events-none px-2 py-0.5 rounded-lg bg-sky-950/85 text-white text-[11px] font-bold shadow-lg border border-sky-400/40 whitespace-nowrap z-50">
                 {item.label}
               </div>
-
               {/* 3D Skeuomorphic Glossy Icon Button */}
               <button
                 onClick={() => handleClick(item.id)}
@@ -87,12 +93,10 @@ export const BottomDock: React.FC<BottomDockProps> = ({
               >
                 {/* Glossy top curved highlight */}
                 <div className="absolute top-0.5 left-1.5 right-1.5 h-1/2 bg-linear-to-b from-white/90 via-white/30 to-transparent rounded-t-xl pointer-events-none" />
-
                 <div className="relative z-10 drop-shadow-xs">
                   {item.icon}
                 </div>
               </button>
-
               {/* Active Indicator Light (Jewel Dot) */}
               <div
                 className={`dock-dot transition-opacity duration-200 ${
@@ -101,8 +105,8 @@ export const BottomDock: React.FC<BottomDockProps> = ({
               />
             </div>
           );
-        })}
-      </div>
-    </div>
-  );
+        })}      
+            </div>     
+         </div>   
+         );
 };
