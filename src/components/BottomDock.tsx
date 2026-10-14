@@ -16,9 +16,8 @@ export const BottomDock: React.FC<BottomDockProps> = ({
   onOpenContact,
   isModalOpen = false
 }) => {
-  const hasActiveModal = isModalOpen || document.querySelector('.fixed.inset-0.z-50') !== null;
-  
-  if (hasActiveModal) {
+  // Jika modal kontak atau modal proyek terbuka, sembunyikan dock sepenuhnya
+  if (isModalOpen) {
     return null;
   }
 
@@ -71,19 +70,12 @@ export const BottomDock: React.FC<BottomDockProps> = ({
 
   return (
     <div className="fixed bottom-3 sm:bottom-5 left-1/2 -translate-x-1/2 z-40 px-2 pointer-events-auto md:hidden">
-      {/* 3D Glossy Aero Dock Container */}
       <div className="aero-dock px-3 sm:px-4 py-2 flex items-end gap-2 sm:gap-3.5 relative shadow-2xl">
-        {/* Dock Base Shelf Reflection Plate */}
         <div className="dock-shelf-plate" />
         {navItems.map((item) => {
           const isActive = activeSection === item.id;
           return (
             <div key={item.id} className="flex flex-col items-center group relative">
-              {/* Tooltip Badge on Hover */}
-              <div className="absolute -top-10 scale-0 group-hover:scale-100 transition-all duration-200 pointer-events-none px-2 py-0.5 rounded-lg bg-sky-950/85 text-white text-[11px] font-bold shadow-lg border border-sky-400/40 whitespace-nowrap z-50">
-                {item.label}
-              </div>
-              {/* 3D Skeuomorphic Glossy Icon Button */}
               <button
                 onClick={() => handleClick(item.id)}
                 className={`dock-icon-btn w-11 h-11 sm:w-13 sm:h-13 rounded-2xl bg-linear-to-tr ${item.color} p-0.5 flex flex-col items-center justify-center border-2 border-white/95 shadow-md cursor-pointer ${
@@ -91,13 +83,11 @@ export const BottomDock: React.FC<BottomDockProps> = ({
                 }`}
                 aria-label={item.label}
               >
-                {/* Glossy top curved highlight */}
                 <div className="absolute top-0.5 left-1.5 right-1.5 h-1/2 bg-linear-to-b from-white/90 via-white/30 to-transparent rounded-t-xl pointer-events-none" />
                 <div className="relative z-10 drop-shadow-xs">
                   {item.icon}
                 </div>
               </button>
-              {/* Active Indicator Light (Jewel Dot) */}
               <div
                 className={`dock-dot transition-opacity duration-200 ${
                   isActive ? 'opacity-100' : 'opacity-0'
@@ -105,8 +95,8 @@ export const BottomDock: React.FC<BottomDockProps> = ({
               />
             </div>
           );
-        })}      
-            </div>     
-         </div>   
-         );
+        })}
+      </div>
+    </div>
+  );
 };

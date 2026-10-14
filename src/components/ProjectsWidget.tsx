@@ -19,10 +19,14 @@ interface Project {
   demoUrl?: string;
 }
 
-export const ProjectsWidget: React.FC = () => {
+interface ProjectsWidgetProps {
+  onModalChange?: (isOpen: boolean) => void;
+}
+
+export const ProjectsWidget: React.FC<ProjectsWidgetProps> = ({ onModalChange }) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
- const projects: Project[] = [
+  const projects: Project[] = [
     {
       id: 'synxplay',
       title: 'Synxplay',
@@ -44,7 +48,7 @@ export const ProjectsWidget: React.FC = () => {
         { label: 'Industry', value: 'Digital Music' },
         { label: 'Role', value: 'Web Developer' }
       ],
-      tools: ['Laravel', 'JavaScript', 'Spotify API', 'Vite', 'PHP', 'Tailwind CSS'], // Silakan sesuaikan jika Anda menggunakan React/framework lain
+      tools: ['Laravel', 'JavaScript', 'Spotify API', 'Vite', 'PHP', 'Tailwind CSS'],
       demoUrl: 'https://synxplay.web.id',
     },
     {
@@ -74,15 +78,16 @@ export const ProjectsWidget: React.FC = () => {
     }
   ];
 
-
   const handleOpenProject = (p: Project) => {
     aeroAudio.playGlassChime();
     setSelectedProject(p);
+    if (onModalChange) onModalChange(true);
   };
 
   const handleClose = () => {
     aeroAudio.playWaterClick();
     setSelectedProject(null);
+    if (onModalChange) onModalChange(false);
   };
 
   return (
@@ -198,14 +203,12 @@ export const ProjectsWidget: React.FC = () => {
         ))}
       </div>
 
-     {/* Interactive Project Detail Modal */}
+      {/* Interactive Project Detail Modal */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-sky-950/40 backdrop-blur-md animate-fadeIn">
-          {/* Pembungkus Utama Modal: max-h-[90vh] untuk membatasi tinggi dan overflow tersembunyi */}
           <div className="aero-glass-panel max-w-2xl w-full relative shadow-2xl border-2 border-white flex flex-col max-h-[90vh]">
             <div className="glass-reflection pointer-events-none rounded-2xl" />
 
-            {/* Tombol Close Absolute di Sudut Kanan Atas (Tetap Diam) */}
             <button
               onClick={handleClose}
               className="absolute top-4 right-4 z-20 p-1.5 rounded-full bg-white/80 border border-sky-200 text-sky-900 hover:bg-white transition-colors cursor-pointer"
@@ -214,10 +217,8 @@ export const ProjectsWidget: React.FC = () => {
               <MdClose className="w-5 h-5" />
             </button>
 
-            {/* Area Konten yang Bisa Di-scroll */}
             <div className="relative z-10 p-6 sm:p-8 overflow-y-auto custom-scrollbar">
               
-              {/* Modal Header */}
               <div className="flex items-start gap-4 mb-4 pr-10">
                 <div className="flex items-center gap-3">
                   <div className="p-3 rounded-2xl bg-white/90 border border-white shadow-md shrink-0">
@@ -234,17 +235,14 @@ export const ProjectsWidget: React.FC = () => {
                 </div>
               </div>
 
-              {/* Subtitle */}
               <div className="text-sm font-semibold text-sky-800 mb-4 pb-3 border-b border-sky-100">
                 {selectedProject.subtitle}
               </div>
 
-              {/* Full Summary */}
               <p className="text-sm text-sky-950 leading-relaxed mb-5 drop-shadow-sm">
                 {selectedProject.summary}
               </p>
 
-              {/* Metrics Grid */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-6">
                 {selectedProject.metrics.map((metric, idx) => (
                   <div key={idx} className="p-3 rounded-xl bg-white/80 border border-white shadow-sm flex flex-col items-center justify-center text-center">
@@ -258,7 +256,6 @@ export const ProjectsWidget: React.FC = () => {
                 ))}
               </div>
 
-              {/* Architectural Breakdown */}
               <div className="mb-6">
                 <h4 className="text-sm font-bold text-sky-950 flex items-center gap-1.5 mb-3">
                   <FaTerminal className="w-4 h-4 text-sky-700" />
@@ -274,7 +271,6 @@ export const ProjectsWidget: React.FC = () => {
                 </ul>
               </div>
 
-              {/* Tech Stack */}
               <div className="mb-6">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-sky-950 mb-2">
                   Technologies & Frameworks
@@ -291,7 +287,6 @@ export const ProjectsWidget: React.FC = () => {
                 </div>
               </div>
 
-              {/* Action Buttons */}
               <div className="flex flex-wrap items-center justify-end gap-3 pt-4 border-t border-sky-100 mt-2">
                 {selectedProject.githubUrl && (
                   <a
@@ -335,6 +330,6 @@ export const ProjectsWidget: React.FC = () => {
           </div>
         </div>
       )}
-      </section>
+    </section>
   );
 };
